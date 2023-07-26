@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        input:hover{
+            background-color: rgb(207, 243, 4);
+            color: rgb(245, 5, 5);
+            border-radius: 50px;
+        }
+        
+        form{
+            color: rgb(9, 225, 13);
+            width: fit-content;
+            padding: 30px;
+            background-color: brown;
+            box-shadow: -20px 20px 30px rgb(11, 0, 0);
+            border-radius: 20px;
+            transition: 1s;
+
+        }
+        input{
+            transition: 1s;
+        }
+        form:hover{
+            transform: translate(-20px,20px);
+            box-shadow: 40px 20px 30px black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <center>
+        <h1>Registration Form</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{usfo}}
+                {{pfo}}
+            </table><br><br>
+
+            <input type="submit" value="Registration ">
+        </form>
+    </center>
+</div>
+</body>
+</html>
